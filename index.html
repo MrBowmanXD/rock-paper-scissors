@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <title>Rock, Paper and Scissors</title>
-    <h1>Rock Paper Scissors</h1>
+    <h1>Rock, Paper Scissors</h1>
 <script>
     
     computerPlay() { 
-        random = Math.floor(Math.random() * 3); 
+       
+        let random = Math.floor(Math.random() * 3); 
         
         if (random == 0) {
             return "Rock";
@@ -16,7 +17,7 @@
         }
         
         return "Something went horribly wrong.";
-    }
+    };
     
     
     singleRound (playerSelection, computerSelection) {
@@ -44,7 +45,7 @@
         } else if (playerSelection == scissors && computerSelection == scissors) {
             return "Too bad, it is a Draw! Scissors can not beat scissors";
         }
-    }
+    };
  
 const playerSelection = "rock";
 const computerSelection = computerPlay();
