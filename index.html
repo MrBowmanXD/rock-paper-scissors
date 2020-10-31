@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+    
+    
+    computerPlay() { random = Math.floor(Math.random() * 3); 
+        if (random == 0) {
+            return "Rock";
+        } else if (random == 1) {
+            return "Paper";
+        } else if (random == 2) {
+            return "Scissors";
+        }
+        return "Something went horribly wrong.";
+    }
+    
+    
+    singleRound (playerSelection, computerSelection) {
+        
+        let rock = "Rock" || "rock" || "ROCK" || "RocK";
+        let paper = "Paper" || "paper" || "PAPER" || "PapeR";
+        let scissors = "Scissors" || "scissors" || "SCISSORS";
+        
+        if (playerSelection == rock && computerSelection == rock) {
+            return "It is a Draw! Rock vs Rock";
+        } else if (playerSelection == rock && computerSelection == paper) {
+            return "You lose! Paper beats Rock my dude";
+        } else if  (playerSelection == rock && computerSelection == scissors) {
+            return "You win! Rock beats Scissors easily";
+        } else if (playerSelection == paper && computerSelection == rock) {
+            return "You win! Well done, Paper beats rock";
+        } else if (playerSelection == paper && computerSelection == scissors) {
+            return "Haha You lose! Nice try guy but scissors beats paper";
+        } else if (playerSelection == paper && computerSelection == paper) {
+            return "Well, it is a Draw! Paper will never beat Paper";
+        } else if (playerSelection == scissors && computerSelection == rock) {
+            return "You lose! Rock beats scissors";
+        } else if (playerSelection == scissors && computerSelection == paper) {
+            return "You win! Great job, scissors cut paper";
+        } else if (playerSelection == scissors && computerSelection == scissors) {
+            return "Too bad, it is a Draw! Scissors can not beat scissors";
+        }
+    }
+ 
+const playerSelection = "rock";
+const computerSelection = computerPlay();
+console.log(singleRound(playerSelection, computerSelection));
+    
+</script>
+
+
+</html>
